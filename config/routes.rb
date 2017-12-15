@@ -6,6 +6,14 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
+  resources :users
+  resources :users
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'users#new', as: 'signup'

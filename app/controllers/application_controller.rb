@@ -3,8 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   private
-  def current_user_login
-    User.where(id: session[:user_login_id]).first
+  def current_user
+    User.where(id: session[:user_id]).first
   end
-  helper_method :current_user_login
+  helper_method :current_user
+  
+  
 end
