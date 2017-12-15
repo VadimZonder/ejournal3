@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :users
   get 'sessions/new'
 
   get 'sessions/create'
@@ -8,6 +7,19 @@ Rails.application.routes.draw do
 
   resources :users
   resources :users
+  resources :users
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   get 'sessions/new'
 
   get 'sessions/create'
