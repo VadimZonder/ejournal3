@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     respond_to do |format|
-      if @user.save
+      if @user.SAVE
         session[:user_id] = @user.id
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
@@ -72,4 +72,34 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
+    
+    
+    #(if from browser /users is called)
+def users
+end
+
+
+#(if from browser /parent is called)
+def parent
+@users_message = "I am a parent"
+end
+ #(when in views var will be called)
+
+#(if from browser /principal is called)
+def principal
+@user_message = "I am a princila/admin"
+end
+ #(when in views var will be called)
+ 
+ #(if from browser /teacher is called)
+def teacher
+@user_message = "I am a teacher"
+end
+ #(when in views var will be called)
+ 
+ #(if from browser /student is called)
+def student
+@user_message = "I am a student"
+end
+ #(when in views var will be called)
 end

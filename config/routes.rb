@@ -61,6 +61,7 @@ Rails.application.routes.draw do
 		match ':controller(/:action(/:id))', :via => :get
 
 
+get '/teacher' => 'users#teacher'
   get '/parent' => 'users#parent'
 		get '/principal' => 'users#principal'
 		  get '/teacher' => 'users#teacher'

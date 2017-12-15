@@ -9,9 +9,11 @@
 <body>
 <%="Welcome to eJournal" %>
 <br />
- <%= "NOW MAKE LOGIN LOGOUT WITH ADDING DIFFERENT PERMISSIONS FOR EACH USER" %>
+ <%= " ADD DIFFERENT PERMISSIONS FOR EACH USER. " %>
  <br />
- 
+<%# use render this is acopy paste%>
+<br/>
+   <%= render 'layouts/header' %> 
  <br />
  <%# e.g .Count to 10 %>
     <%= "Let's count to 10" %>
@@ -37,6 +39,9 @@
 
 <br />
 <%= link_to("I am a student", {:controller => 'users', :action => 'student'}) %>
+
+<br />
+<%= link_to("Post", {:controller => 'posts', :action => 'index'}) %>
 <%= yield %>
 
 </body>
