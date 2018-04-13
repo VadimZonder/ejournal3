@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-
+ruby '2.3.4'
+#gem 'ruby', '2.3.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -13,6 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+#bootstrap
+gem 'bootstrap-sass' , '~> 3.2.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -25,6 +29,39 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
+
+gem 'devise', '4.3.0'
+
+
+
+#Gems for charts/analysis________
+gem 'chartkick', '~> 1.2.4'
+gem 'highcharts-rails'
+gem 'groupdate', '~> 3.2.0'
+gem 'active_median', '~> 0.1.0'
+#________________________________
+# Use sqlite3 as the database for Active Record
+#used for development and testing
+gem 'sqlite3' #, '~> 1.3.13', group: [:development, :test]
+	
+#postgres for production db
+gem 'pg' #, group: :production
+	
+#12 factor for Heroku
+gem 'rails_12factor', group: :production
+
+#insted of webrick 
+gem 'puma'
+
+gem 'web-console', '~> 2.0'
+
+
+gem "google-cloud-language"
+
+group :test do
+  gem "rspec"
+  gem "google-cloud-storage"
+end
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -39,7 +76,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  #gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
