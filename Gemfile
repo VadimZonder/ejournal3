@@ -41,7 +41,7 @@ gem 'groupdate', '~> 3.2.0'
 gem 'active_median', '~> 0.1.0'
 #________________________________
 # Use sqlite3 as the database for Active Record
-#used for development and testing
+#used for development and testing##
 gem 'sqlite3' , '~> 1.3.13', group: [:development, :test]
 	
 #postgres for production db
@@ -53,7 +53,9 @@ gem 'rails_12factor', group: :production
 #insted of webrick 
 gem 'puma'
 
-gem 'web-console', '~> 2.0'
+group :development do
+  gem 'web-console', '2.0.0.beta3'
+end
 
 
 gem "google-cloud-language"
